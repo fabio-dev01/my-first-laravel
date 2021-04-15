@@ -8,7 +8,7 @@ database: MySQL. Using PhpMyAdmin
 
 
 what's in that application?
---> Registration of notices = As soon as they are registered, they will be presented on the screen
+-> Registration of notices = As soon as they are registered, they will be presented on the screen
 
 
 What was used?
@@ -16,6 +16,6 @@ What was used?
 -> Migrations
 -> Database: MySQL (PhpMyAdmin)
 
-comments:I started with ubuntu, but several errors started to appear in relation to MySQL Workbench, so I switched to Windows and later returned to Ubuntu, with the PostGres Database
+comments: I started with ubuntu, but several errors started to appear in relation to MySQL Workbench, so I switched to Windows and later returned to Ubuntu, with the PostGres Database
 
 
