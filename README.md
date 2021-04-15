@@ -1,15 +1,15 @@
 Wellcome to my first application in Laravel.
 
-################################
+###################
 made in Laravel 7x
 database: MySQL. Using PhpMyAdmin
-################################
+###################
 
--> Import the database present in this repository and change the file ".env"
+--> Import the database present in this repository and change the file ".env"
 
-################################
+###################
 what's in that application?
--> Registration of notices = As soon as they are registered, they will be presented on the screen
+--> Registration of notices = As soon as they are registered, they will be presented on the screen
 
 
 What was used?
