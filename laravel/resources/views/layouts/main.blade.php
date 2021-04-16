@@ -6,6 +6,9 @@
 
         <title>@yield('title')</title>
 
+         <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
+
         <!-- Fonte do Google -->
         <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
 
@@ -29,6 +32,19 @@
               <li class="nav-item active">
                 <a href="/" class="nav-link">Contato</a>
               </li>
+                  <!-- logout -->
+              <a class="dropdown-item" href="{{ route('logout') }}"
+              onclick="event.preventDefault();
+              document.getElementById('logout-form').submit();">
+              {{ __('Logout') }}
+            </a>
+
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+              @csrf
+            </form>
+              <!-- end logout using default of "this"-->
+
+              <li>
             </ul>
           </div>
         </nav>

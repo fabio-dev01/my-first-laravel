@@ -14,6 +14,7 @@
         <br><br>
         <h1>QUADRO DE AVISOS</h1>
         <br><br>
+        <div class="row">
         @foreach($warnings as $w)
         <div class="card" style="width: 18rem;">
           <div class="card-body">
@@ -24,6 +25,7 @@
          </div>
     </div>
         @endforeach
+    </div>
 </div>
 
 @endsection

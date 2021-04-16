@@ -19,7 +19,11 @@ use App\Warning;
 Route::get('/', function () {
 	$warnings = Warning::all();
     return view('welcome', ['warnings' => $warnings]);
-});
+})->middleware('auth');
 
-Route::get('/warnings', [WarningsController::class, 'create']);
-Route::post('/warnings/create', [WarningsController::class, 'store']);
+Route::get('/warnings', [WarningsController::class, 'create'])->middleware('auth');
+Route::post('/warnings/create', [WarningsController::class, 'store'])->middleware('auth');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
