@@ -19,6 +19,9 @@ class WarningsController extends Controller
     	$warning->description = $request->description;
     	$warning->date = $request->date;
 
+        $user = auth()->user();  //dá acesso ao usuário logado
+        $warning->user_id = $user->id;
+
     	$warning->save();
     	return redirect('/')->with('msg', 'Aviso cadastrado com sucesso!');
     }

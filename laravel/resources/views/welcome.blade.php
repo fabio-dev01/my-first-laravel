@@ -21,7 +21,7 @@
             <h5 class="card-title"> {{$w->title}} </h5>
             <h6 class="card-subtitle"> {{date('d/m/Y'), strtotime($w->date)}} </h6>
             <p class="card-text"> {{$w->description}} </p>
-            <a href="#" class="card-link">Ver Aviso</a>
+            <p class="card-text"> Usuário </p>
          </div>
     </div>
         @endforeach
