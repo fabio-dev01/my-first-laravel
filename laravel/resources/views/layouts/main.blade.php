@@ -30,7 +30,7 @@
                 <a href="/" class="nav-link">Clientes</a>
               </li>
               <li class="nav-item active">
-                <a href="/" class="nav-link">Contato</a>
+                <a href="/" class="nav-link">Info</a>
               </li>
                   <!-- logout -->
               <a class="dropdown-item" href="{{ route('logout') }}"

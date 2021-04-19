@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Warning;
+use App\User;
 
 class WarningsController extends Controller
 {
@@ -24,5 +25,14 @@ class WarningsController extends Controller
 
     	$warning->save();
     	return redirect('/')->with('msg', 'Aviso cadastrado com sucesso!');
+    }
+
+    public function show($id)
+    {
+        $warning = Warning::findOrFail($id);
+
+        $warningOwner = User::where('id', $warning->user_id)->first()->toArray();
+
+        return view('warnings.show', ['warning' => $warning, 'warningOwner' => $warningOwner]);
     }
 }

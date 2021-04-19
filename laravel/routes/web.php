@@ -23,7 +23,11 @@ Route::get('/', function () {
 
 Route::get('/warnings', [WarningsController::class, 'create'])->middleware('auth');
 Route::post('/warnings/create', [WarningsController::class, 'store'])->middleware('auth');
+Route::get('/warnings/show/{id}', [WarningsController::class, 'show'])->middleware('auth');
+
+
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
