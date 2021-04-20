@@ -35,4 +35,20 @@ class WarningsController extends Controller
 
         return view('warnings.show', ['warning' => $warning, 'warningOwner' => $warningOwner]);
     }
+
+    public function dashboard()
+    {
+        $user = auth()->user();
+
+        $warnings = $user->warnings;
+
+        return view('dashboard', ['warnings' => $warnings]);
+    }
+
+    public function destroy($id)
+    {
+        Warning::findOrFail($id)->delete();
+
+        return redirect('/dashboard')->with('msg', 'Aviso excluído.');
+    }
 }
